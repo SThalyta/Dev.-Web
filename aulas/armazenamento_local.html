@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armazenamento Local</title>
+
+  <body>
+    <h1>Exemplo de LocalStorage</h1>
+    <button onclick="saveLocal()">Salvar Dados</button>
+    <button onclick="mostrarLocal()">Mostrar Dados</button> 
+
+    
+    <p id="resultado"></p>
+
+    <script>
+        function saveLocal(){
+            localStorage.setItem('Nome', 'Ulyta');
+            alert('Dados salvos no LocalStorage!');
+
+        }
+        function mostrarLocal(){
+            const nome = localStorage.getItem('Nome');
+            document.getElementById('resultado').innerText = 'Nome armazenado: ' + nome ? nome : 'Nenhum nome encontrado.';
+
+        }
+    </script>
+  </body>
+
+</html>

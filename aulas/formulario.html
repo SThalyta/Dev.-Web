@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>  
+
+<body>
+    <h2>Formulário</h2>
+    <form action="/submit" method="post">
+        <label for="nome">Nome completo: </label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required><br><br>
+        <label type="email" for="email">E-mail: </label><br>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br><br>
+        <label for="site">Site: </label><br>
+        <input type="url" id="site" name="site" placeholder="Digite seu site" required><br><br>
+        <label for="Data de Nascimento">Data de Nascimento: </label><br>
+        <input type="date" id="data_nascimento" placerholder="Data de nascimento" required><br><br>
+        <label for="tel">Telefone: </label><br>
+        <input type="tel" id="tel" name="tel" placeholder="Digite seu telefone" required><br><br>
+        <label for="senha">Senha: </label><br>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required><br><br>
+
+        <input type="submit" value="Cadastrar">
+
+    </form>
+</body>
+</html>

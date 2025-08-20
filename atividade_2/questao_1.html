@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mídia Interativa com Geolocalização</title>
+</html>
+<body>
+    <h1>Assista o melhor vídeo da internet</h1>
+    <video width="600" height="400" controls="controls">
+        <source src="video.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <h1>Aperte o play e curta a experiência</h1>
+
+    <div>
+        <button onclick="document.getElementById('player').play()">Play</button>
+        <button onclick="document.getElementById('player').pause()">Pause</button>
+        <button onclick="document.getElementById('player').volume+=0.1">Aumentar</button>
+        <button onclick="document.getElementById('player').volume-=0.1">Diminuir</button>
+    </div>
+    <audio id="player" autoplay="autoplay" controls="controls" >
+        <source src="audio.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <h1>Geolocalização</h1>
+    <button onclick="getLocation()">Obter Localização</button>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.write("Geolocalização não é suportada neste navegador.");
+            }
+        }
+        function showPosition(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            <h1>Geolocalização</h1>
+            document.write("Latitude: " + lat + "<br>Longitude: " + lon);
+        }
+    </script>
+</body>

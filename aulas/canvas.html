@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <h2>Desenho com Canvas</h2>
+    <canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, Math.PI * 2); // Arco de 0 a 180 graus
+        ctx.fill();
+        ctx.stroke();
+    </script>
+
+    <h2>Desenho com SVG</h2>
+    <svg width="200" height="200" style="border: 1px solid blue;">
+        <circle cx="100" cy="100" r="40" fill="red" /> 
+    </svg>
+    
+</body>
+</html>
