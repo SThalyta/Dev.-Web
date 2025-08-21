@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<header>
+  <h1>Formulário Aprimorado com Canvas ou SVG</h1>
+</header>
+<body>
+  <form id="formulario">
+    <label for="nome">Nome Completo</label><br>
+    <input type="text" id="nome" nome="nome" placeholder="Digite seu Nome" required><br>
+    <label for="email">E-mail</label><br>
+    <input type="email" id="email" nome="email" placeholder="ex: iforf@gmail.com" required><br>
+    <label for="data_de_nascimento">Data de Nascimento</label><br>
+    <input type="date" id="data_de_nascimento" nome="data_de_nascimento" required><br>
+    <label for="telefone">Telefone</label><br>
+    <input type="tel" id="telefone" nome="telefone" placeholder="Digite seu telefone"><br>
+    <label for="avaliacao">Avalie esse formulário (0-100)</label><br>
+    <input type="range" id="avaliacao" nome="avaliacao" min="0" max="100" value="50"><output for="valor_atual" id="valor_atual">50</output><br>
+    <button type="submit">Enviar avaliação</button>
+    </form>
+    <div id="grafico_container">
+      <h3>Sua avaliação</h3>
+      <svg id="grafico" width="100%" height="50"></svg>
+    </div>
+  <script>
+      const slider = document.getElementById("avaliacao");
+      const output = document.getElementById("valor_atual");
+       slider.addEventListener("input", () => {
+       output.textContent = slider.value;
+       }); 
+       const formulario = document.getElementById("formulario");
+      const grafico = document.getElementById("grafico");
+      const graficoContainer = document.getElementById("grafico_container");
+       formulario.addEventListener("submit", (event) =>{
+        event.preventDefault();
+        const valorAvaliacao = parseInt(slider.value);
+       grafico.innerHTML = '';
+       const retangulo = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
+       retangulo.setAttribute("width",valorAvaliacao + "%");
+       retangulo.setAttribute("height", "30");
+       retangulo.setAttribute("fill", "steelblue");
+       grafico.appendChild(retangulo);
+       graficoContainer.style.display = 'block';
+       const texto = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+       texto.setAttribute("x", valorAvaliacao + "%");
+       texto.setAttribute("y", "30");
+       texto.setAttribute("fill", "#000");
+       texto.setAttribute("font-size", "14");
+       texto.textContent = valorAvaliacao + "%";
+       grafico.appendChild(texto);
+        }); 
+        graficoContainer.style.display = 'none';
+    </script>
+
+</body>
+</html>
