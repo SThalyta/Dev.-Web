@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Menu com Formulário</title>
+    <link rel="stylesheet" href="../atividade_3/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <form action="/submit" method="post">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+
+            <input style="background-color:rgb(32, 133, 32); color: white" type="submit" value="Login">
+
+        </form>
+    </nav>
+</body>
+</html>
