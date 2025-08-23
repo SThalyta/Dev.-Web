@@ -1,0 +1,44 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(67, 12, 67);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width:  400px; 
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(67, 12, 67);
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: rgb(67, 12, 67);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] 
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid rgb(67, 12, 67);
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: rgb(67, 12, 67);
+    outline: none;
+    box-shadow: 0 0 5px rgba(67, 12, 67, 0.5);
+}
