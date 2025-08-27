@@ -3,9 +3,11 @@
 .navbar {
     background-color: #2c2c2c;
     overflow: hidden; /* Garante que o conteúdo não saia da barra */
-
+    display: flex;
 }
 .navbar ul {
+      width: 100%;
+      display:inline-flex;
       list-style-type: none; /* Remove marcadores de lista */
       margin: 0;
       padding: 0;
@@ -19,8 +21,11 @@
     padding: 14px 16px; /* Espaçamento interno dos links */
     text-decoration: none; /* Remove o sublinhado dos links */
     font-size: 17px;
+    margin: 2px;
 }
-.navbar form{
+.container{
+    width: 100%;
+    text-align: right;
     float: right;
-    padding: 10px;
+    padding-top: 30px;
 }
