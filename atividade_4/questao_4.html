@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem regressiva</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Digite um número para iniciar a contagem"));
+        if(isNaN(numero)) {
+            alert("Por favor, digite um número válido.");
+        } else {
+            setInterval(() => {
+                if (numero >= 0) {
+                    console.log(numero);
+                    numero--;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

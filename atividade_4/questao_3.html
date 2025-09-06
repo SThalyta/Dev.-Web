@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    teste
+    <script>
+        let n1 = prompt("Digite o primeiro número: ");
+        let n2 = prompt("Digite  segundo número: ");
+        let operacao = prompt("Digite a operação (1 - Adição, 2 - Subtração, 3 - Multiplicação, 4 - Divisão: ");
+        switch (operacao) {
+            case '1':
+                alert("O resultado da adição é: " + (parseFloat(n1) + parseFloat(n2)));
+                break;
+            case '2':
+                alert("O resultado da subtração é: " + (parseFloat(n1) - parseFloat(n2)));
+                break;
+            case '3':
+                alert("O resultado da multiplicação é: " + (parseFloat(n1) * parseFloat(n2)));
+                break;
+            case '4':
+                if (parseFloat(n2) !== 0) {
+                    alert("O resultado da divisão é: " + (parseFloat(n1) / parseFloat(n2)));
+                } else {
+                    alert("Erro: Divisão por zero não é permitida.");
+                }
+                break;
+            default:
+                alert("Operação inválida.");
+        }
+    </script>
+</body>
+</html>
