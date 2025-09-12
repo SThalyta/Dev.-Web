@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando estilos no javascript</title>
+</head>
+<body>
+    <p id="paragrafo">Este é um parágrafo.</p>
+    <button onclick="mudarCor()">Mudar cor do paragrafo</button>
+    <script>
+        function mudarCor(){
+            const paragrafo = document.getElementById('paragrafo');
+            paragrafo.style.color = 'blue';
+            paragrafo.style.fontSize = '20px';
+            paragrafo.style.backgroundColor = 'lightgray';
+        }
+    </script>
+</body>
+</html>
